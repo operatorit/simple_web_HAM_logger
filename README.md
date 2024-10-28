@@ -22,7 +22,7 @@ Project is based on Django framework. Core functionalities are based on tutorial
 
 # Release notes
 
-## v1.0 2024...
+## v1.0 2024-OCT-28
 First version deployed with basic logging functionalities.
 - separate logs for each user,
 - user defines activities to group similar QSOs.
@@ -32,7 +32,7 @@ First version deployed with basic logging functionalities.
 - inputs validation for report,
 - ADIF export.
 
-# Aplication logic
+# Application logic
 
 It's an application supporting HAM radio operators with logging QSOs with other amateurs.
 
