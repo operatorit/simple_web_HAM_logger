@@ -1,0 +1,30 @@
+{% extends 'HAM_logger/base.html' %}
+
+{% block page_header %}
+<h3> {{ activity }} </h3>
+{% endblock page_header %}
+
+{% block content %}
+
+<p>QSOs:</p>
+
+<p><a href = "{% url 'HAM_logger:new_qso' activity.id %}">Add new QSO</a></p>
+
+	{% for qso in QSOs %}
+	<div class = "card mb-3">
+		<h4 class = "card-header">
+		{{ qso.date_added|date:'d - M - Y' }}
+		{{ qso.time_added|time:'H:i' }} {{ qso.your_call }} 
+		<small><a href = "{% url 'HAM_logger:edit_qso' qso.id %}">Edit QSO</a></small>
+		</h4>
+	<div class = "card-body">
+		{{ qso.text|linebreaks }}
+	</div>
+	</div>
+
+	{% empty %}
+	<p> There are no QSOs for this activity yet.</p>
+	{% endfor %}
+
+{% endblock content %}
+

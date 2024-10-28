@@ -1,0 +1,25 @@
+<p>
+	<a href="{% url 'HAM_logger:index' %}"> Simple Web HAM Logger</a> -
+	<a href="{% url 'HAM_logger:activities' %}">Activities</a>
+	
+	{% if user.is_authenticated %}
+		Welcome, {{ user.username }}
+		<form method = "post" action = "{% url 'users:logout' %}">
+			{% csrf_token %}
+			<button type = "submit">Log out</button>
+		</form>
+	{% else %}
+		<form method = "post" action = "{% url 'users:register' %}">
+			{% csrf_token %}
+			<button type = "submit">Registration</button>
+		</form>
+		<form method = "post" action = "{% url 'users:login' %}">
+			{% csrf_token %}
+			<button type = "submit">Log in</button>
+		</form>
+	{% endif %}
+</p>
+
+{% block content %}
+
+{% endblock content %}

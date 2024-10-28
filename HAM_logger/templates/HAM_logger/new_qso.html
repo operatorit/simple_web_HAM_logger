@@ -1,0 +1,14 @@
+{% extends "HAM_logger/base.html" %}
+
+{% block content %}
+
+<p><a href = "{% url 'HAM_logger:activity' activity.id %}">{{ activity }}</a></p>
+
+<p> Add a new QSO </p>
+	<form action = "{% url 'HAM_logger:new_qso' activity.id %}" method = 'post'>
+	{% csrf_token %}
+	{{form.as_p}}
+	<button name=.submit'>Add QSO</button>
+	</form>
+
+{% endblock content %}

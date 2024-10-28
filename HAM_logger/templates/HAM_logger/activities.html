@@ -1,0 +1,20 @@
+{% extends "HAM_logger/base.html" %}
+
+{% block page_header %}
+<h1>Activities</h1>
+{% endblock page_header %}
+
+{% block content %}
+
+<ul>
+	{% for activity in activities %}
+	<li><h3> 
+		<a href = "{% url 'HAM_logger:activity' activity.id %}">{{ activity }} </a>
+	</h3></li>
+	{% empty %}
+	<li><h3>No activities added yet.</h3></li>
+	{% endfor %}
+</ul>
+
+<h3><a href = "{% url 'HAM_logger:new_activity' %}"> Add a new activitty</a></h3>
+{% endblock content %}

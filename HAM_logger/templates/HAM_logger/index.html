@@ -1,0 +1,12 @@
+{% extends "HAM_logger/base.html" %}
+
+{% block page_header %}
+<div class = "jumbotron">
+	<h1 class = "display-3"> Log your QSOs in different activities</h1>
+	<p class = "lead">Simple Web HAM Logger is a simple web application that helps you to track your amateur QSOs.</p>
+
+	<a class = "btn-lg btn-primary"
+	   href = "{% url 'users:register' %}"
+	   role = "button">Register &raquo;</a>
+</div>
+{% endblock page_header %}
