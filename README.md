@@ -28,7 +28,6 @@ First version deployed with basic logging functionalities.
 - user defines activities to group similar QSOs.
 
 ### TODO:
-- non-mandatory fields (my activation, correspondent's activation),
 - inputs validation for report,
 - ADIF export.
 

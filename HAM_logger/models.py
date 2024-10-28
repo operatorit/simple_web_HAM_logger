@@ -49,8 +49,8 @@ class Contact(models.Model):
     mode = models.CharField(max_length = 3)
     sent_report = models.IntegerField()
     received_report = models.IntegerField()
-    my_ref =  models.CharField(max_length = 15, null = True)
-    your_ref = models.CharField(max_length = 15, null = True)
+    my_ref =  models.CharField(max_length = 15, null = True, blank = True)
+    your_ref = models.CharField(max_length = 15, null = True, blank = True)
 
     class Meta:
         verbose_name_plural = 'QSOs'
