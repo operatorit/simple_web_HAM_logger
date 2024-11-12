@@ -28,9 +28,10 @@ First version deployed with basic logging functionalities.
 - user defines activities to group similar QSOs.
 
 ### TODO:
-- inputs validation for report,
+- inputs validation for report fields,
 - removing QSOs,
 - removing activities,
+- captcha for user's registration,
 - ADIF export.
 
 # Application logic
