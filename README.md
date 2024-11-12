@@ -29,6 +29,8 @@ First version deployed with basic logging functionalities.
 
 ### TODO:
 - inputs validation for report,
+- removing QSOs,
+- removing activities,
 - ADIF export.
 
 # Application logic
