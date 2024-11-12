@@ -1,5 +1,5 @@
 # Simple Web HAM Logger
-by Janek, operator-paramedyk.pl
+by Janek, operatorit.pl
 
 # Project idea
 
