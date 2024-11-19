@@ -5,7 +5,7 @@ from django.urls import reverse
 
 # Create your views here.
 
-def register(request):
+def show_user_registration_page(request):
     """New user registration."""
     if request.method == 'GET':
         # Show blank registrattion form

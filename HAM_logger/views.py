@@ -7,7 +7,7 @@ from .forms import ActivityForm, QSOForm
 
 # Create your views here.
 
-def index(request):
+def show_main_page(request):
     """The home page for HAM logger."""
     return render(request, 'HAM_logger/index.html')
 
@@ -17,14 +17,14 @@ def check_activity_owner(owner, current_user):
         raise Http404
 
 @login_required
-def activities(request):
+def show_activities_page(request):
     """Show all activities"""
     activities = Activity.objects.filter(owner = request.user).order_by('date_added')
     context = {'activities': activities}
     return render(request, 'HAM_logger/activities.html', context)
 
 @login_required
-def activity(request, activity_id):
+def show_activity_page(request, activity_id):
     """Show a single activity with all its QSOs"""
     activity =  get_object_or_404(Activity, id = activity_id)
     # Make sure the activation belongs to the current user
@@ -35,7 +35,7 @@ def activity(request, activity_id):
     return render(request, 'HAM_logger/activity.html', context)
 
 @login_required
-def new_activity(request):
+def show_create_activity_page(request):
     """Adds a new activity to the log"""
     if request.method == 'GET': 
         # no data submitted, create a blank forms
@@ -54,7 +54,7 @@ def new_activity(request):
     return render(request, 'HAM_logger/new_activity.html', context)
 
 @login_required
-def new_qso(request, activity_id):
+def show_create_qso_page(request, activity_id):
     """Add a new QSO to selected activity"""
     activity = Activity.objects.get(id = activity_id)
 
@@ -80,7 +80,7 @@ def new_qso(request, activity_id):
     return render(request, 'HAM_logger/new_qso.html', context)
 
 @login_required
-def edit_qso(request, qso_id):
+def show_edit_qso_page(request, qso_id):
     """Edit an existing QSO"""
     qso = Contact.objects.get(id = qso_id)
     activity = qso.activity
