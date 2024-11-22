@@ -46,6 +46,14 @@ It's a very long-term plan (or dream rather), but I would like to extend this ap
 
 It's an application supporting HAM radio operators with logging QSOs with other amateurs. HAM (or amateur) radio operators are a hobbysts that use radio devices to connect with... other operators (or "stations"). Basic setup is a radio (tranceiver) connected to antenna(s) and power supply. It may be portable (handheld), mobile (mounted in a car/boat/plane) or stationary. Dependent on the hardware, radio amateurs connect (make QSOs) using CW (morse telegraphy), phone, or data transmission modes. There are also specific "projects", like QSOs via moon (EME), aurora, satelites, terrain activities (SOTA/POTA - the one where I'm active in), contests... If you are interested in this topic, you can find more in the web, starting from [Wikipedia](https://en.wikipedia.org/wiki/Amateur_radio).
 
+Every amateur radio operator is obligued to keep record of his/her QSOs - log. It may be even old-fashioned notebook with notes, howevere there is a number of software solutions to support logging. This application is a simple self-hosted logger.
+
+## Motivation
+
+As abovementioned, there are very good software solutions available for HAM radio operators, including sophisticated solutions integrated with external services and allowing to control radio and antennas from the computer. I'm not trying to develop something similar (at this stage:-) ). My logger should be simple, because sometimes (e.g. during outdoor activations) simple solution is the best one.
+
+Actually, I started this project to learn Django and practice Vim. QSO logging was just a context I introduced not to just copy tutorial from the book. Then I decided that it may be actually helpfull if someone needs simple and cross-platform logging software, and that it can be further improved.
+
 # Application logic
 
 In this application, each user has it's own account and cannot view other's QSOs. In the application, user is a __person or club__, and may use different callsigns in its account (however can also establish different accoutns for different callsigns).
